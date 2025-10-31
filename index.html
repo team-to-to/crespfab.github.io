@@ -1,45 +1,100 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>크레스팹(Crespfab)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="크레스팹(Crespfab) - 일상 속을 편리하게 만드는 앱을 만듭니다.">
-  <style>
-    body {
-      font-family: "Pretendard", sans-serif;
-      text-align: center;
-      background-color: #fff;
-      color: #333;
-      padding: 60px 20px;
-    }
-    h1 { font-size: 28px; margin-bottom: 20px; }
-    p { font-size: 16px; line-height: 1.6; }
-    a {
-      display: inline-block;
-      margin-top: 24px;
-      color: #ff6600;
-      text-decoration: none;
-      border: 1px solid #ff6600;
-      padding: 8px 16px;
-      border-radius: 8px;
-      transition: 0.2s;
-    }
-    a:hover {
-      background-color: #ff6600;
-      color: white;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crespfab | 개발과 기록으로 세상을 잇다</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 <body>
-  <h1>크레스팹 (Crespfab)</h1>
-  <p>일상 속 불편함을 해결하는 따뜻한 기술을 만듭니다.</p>
 
-  <h2>앱 소개</h2>
-  <p><strong>열기 (Yeolgi)</strong><br>
-  아이의 체온과 복약 기록을 손쉽게 관리할 수 있는 앱입니다.<br>
-  기록보다 기억이 더 중요할 때, 열기가 함께합니다.</p>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">crespfab</div>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-  <a href="/privacy/yeolgi.html">열기 앱 개인정보처리방침 보기</a>
+  <!-- Hero Section -->
+  <section class="hero" data-aos="fade-up">
+    <h1>개발과 기록으로<br>세상을 잇다.</h1>
+    <p>Crespfab — Create, Spread, Fabricate<br>세상에 가치를 만들어 퍼뜨리는 작은 공장.</p>
+    <div class="buttons">
+      <a href="#" class="btn-primary">열기 앱 보기</a>
+      <!-- <a href="https://techlab.tistory.com" class="btn-outline">Tech Lab 블로그</a> -->
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects" id="projects">
+    <h2 data-aos="fade-up">Projects</h2>
+
+    <div class="project-grid">
+      <!-- 열기 -->
+      <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-images">
+          <img src="assets/yeoljigi_1.png" alt="열기 앱 스크린샷 1" />
+          <img src="assets/yeoljigi_2.png" alt="열기 앱 스크린샷 2" />
+        </div>
+        <h3>열기 (Yeoljigi)</h3>
+        <p>아이가 아플 때, 기억보다 기록이 필요해요.<br>
+          가족이 함께 체온과 복약을 기록하는 앱.</p>
+      </div>
+
+      <!-- 미래화폐가치 계산기 -->
+      <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-images">
+          <img src="assets/futurevalue_1.png" alt="미래가치 계산기 화면 1" />
+          <img src="assets/futurevalue_2.png" alt="미래가치 계산기 화면 2" />
+        </div>
+        <h3>Future Value Calculator</h3>
+        <p>현재 돈의 가치가 시간이 지나면 얼마나 달라질까요?<br>
+          물가 상승률을 반영해 미래 화폐가치를 계산해주는 앱.</p>
+      </div>
+
+      <!-- AutoPoster -->
+      <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-images">
+          <img src="assets/autoposter_1.png" alt="AutoPoster 화면 1" />
+          <img src="assets/autoposter_2.png" alt="AutoPoster 화면 2" />
+        </div>
+        <h3>AutoPoster</h3>
+        <p>GPT로 글을 만들고, 블로그에 자동 포스팅까지.<br>
+          개발자에게 시간을 돌려주는 자동화 툴.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about" data-aos="fade-up">
+    <h2>About</h2>
+    <p>
+      저는 1인 개발자이자 창작자, 인설 송입니다.<br>
+      앱, 자동화, AI — 제가 만드는 도구들은<br>
+      세상을 조금 더 효율적이고 따뜻하게 만듭니다.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <footer id="contact">
+    <h3 data-aos="fade-up">Contact</h3>
+    <p data-aos="fade-up" data-aos-delay="100">
+      📩 contact@crespfab.com<br>
+      <!-- 🌐 <a href="https://techlab.tistory.com">Tech Lab 블로그</a> -->
+    </p>
+    <p class="copyright">© 2025 Crespfab. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  </script>
 </body>
 </html>
