@@ -105,6 +105,8 @@ a { text-decoration: none; color: inherit; }
 }
 .project-images img {
   width: 48%;
+  max-height: 300px;       /* 추가 */
+  object-fit: cover;       /* 비율 유지하며 잘라냄 */
   border-radius: 12px;
   transition: transform .3s ease;
 }
