@@ -99,19 +99,27 @@ a { text-decoration: none; color: inherit; }
 }
 .project-images {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
   margin-bottom: 16px;
 }
 .project-images img {
-  width: 48%;
-  max-height: 300px;       /* 추가 */
-  object-fit: cover;       /* 비율 유지하며 잘라냄 */
+  width: 48%;               /* ✅ 기본: 2장 나란히 */
+  max-width: 300px;
+  height: auto;
   border-radius: 12px;
+  object-fit: contain;
   transition: transform .3s ease;
 }
 .project-images img:hover {
   transform: scale(1.03);
+}
+/* ✅ 모바일에서만 한 줄 한 장으로 변경 */
+@media (max-width: 768px) {
+  .project-images img {
+    width: 100%;
+  }
 }
 .project-card h3 { color: #FF7F50; margin-bottom: 8px; }
 
